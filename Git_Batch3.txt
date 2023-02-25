@@ -1,0 +1,75 @@
+There are many version version control tools available:
+1. git
+2. svn
+3. cvs
+4. TFS
+
+Git (Global information tracker)-source code management tool
+Is is version control syatem or tool which is used to track versions files and directories.
+
+Difference between Git and SVN
+Git - Git is a distributed version control system means whole repository will be there in the local workspace.
+If you want to switch to previous version of code you can do it in the local workspace itself.
+Git has many features like rebase, fetch and stash etc.
+
+svn - It is a centralized version control system where we have only latest version of a code in the local workspace.
+If you want to switch to a previous versions of code then you need to checkout that prevoius version from central.
+It doesn't have direct commands.
+
+Git installation 
+
+On ubuntu 
+$sudo apt-get update
+$sudo apt-get install -y git
+
+On RHEL/CentOS/Fedora
+$sudo yum -y update
+$sudo yum install -y git
+
+* Git commands
+
+1. To configure name and email globally for all users on a soecific machine
+git config --global user.name "username"
+git config --global user.email "emai id"
+
+2. create git repository directory
+mkdir <gitreponame>
+
+3. Initialize git repository
+cd git_repo/
+git init
+
+4. ls -al - to make sure .git is present
+
+5. vi <filename> : Add few lines and save it
+
+6. git status : To check whether the files are in workspace or staging area or in local/remote repo.
+                To make sure working directory is clean.
+
+7. git add <filename> : To add files from workspace to staging area.
+           syn : git add <filename>
+                 git add .
+                 git add -u
+                 git add -add
+8. git commit -m "<msg>" : This will commit the files from staging area to git repo.
+
+9. git log : It shows the history of the repository. 
+
+10. git log <filename> : It shows the history of single file
+
+11. git log -2 : It shows the latest 2 commits of any file.
+
+12. git log -2 <filename> :	It shows the latest 2 commits of particular file.
+
+Workflow of Git
+
+* Worspace : It is a directory where we modify project related files.
+             Files present in the workspace are untracked files.
+             To move the files from workspace to staging area we use git add command.
+* Staging area/Index area : Here we save the changes.
+                 To save the changes we use "git commit" it will get committed to the git repo.
+                 Here commit id will get created and the files present in this area are called as indexed file.	
+* Local repo/git repo : It is a location where version controlling happens and the files present here are called as committed files.
+ 				 
+
+
